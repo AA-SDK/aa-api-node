@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+commonjs
+coverage
+docs
+module
+node_modules
+types
+**/*.gz
