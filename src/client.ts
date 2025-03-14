@@ -158,7 +158,7 @@ export class Client {
     if (Date.now() < this.tokenExpireTime) {
       return
     }
-    const now = Date.now().toString(32)
+    const now = Date.now().toString(36)
     const hash = createHash('md5').update(`${now}${this.secret as string}`).digest('hex')
     const token = `${this.keyId as string}${now}${hash}`
     this.headers.Authorization = `Bearer ${token}`

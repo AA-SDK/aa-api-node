@@ -94,7 +94,7 @@ describe('Client', () => {
   })
 
   it('should generate a token correctly', () => {
-    const now = Date.now().toString(32)
+    const now = Date.now().toString(36)
     const hash = createHash('md5').update(`${now}${mockConfig.secret as string}`).digest('hex')
     const expectedToken = `${mockConfig.keyId as string}${now}${hash}`
     client[_generateToken]()
